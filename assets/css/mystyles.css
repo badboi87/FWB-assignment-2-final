@@ -1,0 +1,533 @@
+/*One great technique: Px at the Root, Rem for Components, Em for Text Elements*/
+
+/*Body/////////////////////////////////////////////////////////////////////*/
+
+body {
+    /*    Background color is grey to reflect the Brutalist Style of Boyd's architecture*/
+    background-color: #e8e8e8;
+    font-size: 16px;
+}
+
+main {
+    background-color: white;
+}
+
+
+
+footer {
+    padding-top: 0.5em;
+    padding-bottom: 7.5em;
+    text-align: center;
+}
+
+/*navigation/////////////////////////////////////////////////////////////////////*/
+
+nav {
+    padding-bottom: 2rem;
+    /*    nav padding minus li padding */
+    padding-left: 13em;
+    padding-top: 7.5rem;
+}
+
+nav ul li {
+    /*    Displays the list horizontally */
+    display: inline;
+    font-family: 'Sanchez', serif;
+    float: left;
+    font-size: 1.5em;
+    /*    Padding between words*/
+    padding-right: 2em;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+nav ul li a:hover {
+    color: lightslategray;
+}
+
+nav ul li a:active {
+    color: #b80000;
+}
+
+nav a:hover {
+    color: lightslategray;
+}
+
+nav a:active {
+    color: beige;
+}
+
+/*Typography/////////////////////////////////////////////////////////////////////*/
+
+h1 {
+    font-size: 6em;
+    padding-top: 0.125em;
+    padding-bottom: 0.8em;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-size: 3em;
+    padding-top: 1em;
+    text-transform: uppercase;
+}
+
+h3 {
+    font-size: 2em;
+    padding-top: 0.68em;
+    /*    Capitalise letters to show h3 as having a lower status from h2*/
+    text-transform: capitalize;
+}
+
+h4 {
+    font-size: 3em;
+}
+
+h5 {
+    font-size: 2em;
+}
+
+h6 {
+    font-size: 1em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Sanchez', serif;
+}
+
+p {
+    font-family: 'Arimo', sans-serif;
+    padding-top: 1em;
+    font-size: 1.2em;
+    line-height: 1.4em;
+}
+
+ul,
+ol {
+    font-family: 'Arimo', sans-serif;
+    font-size: 1em;
+    line-height: 1.4em;
+    padding-top: 0.5em;
+    padding-left: 3em;
+}
+
+ol {
+    list-style-type: decimal;
+}
+
+ul {
+    list-style-type: disc;
+}
+
+a {
+    text-decoration: none;
+    color: #d17373;
+}
+
+a:hover {
+    color: blue;
+}
+
+a:active {
+    color: red;
+}
+
+/*Classes/////////////////////////////////////////////////////////////////////*/
+
+/*Borders*/
+.wrapper {
+    padding-left: 16em;
+    padding-right: 40em;
+    padding-bottom: 2em;
+}
+
+/*holds the nav elements to be removed when in mobile mode*/
+.nav-other-links {}
+
+
+/*Drop-down navigation for mobile devices*/
+.menu-list {
+    position: relative;
+    display: none;
+    float: right;
+}
+
+.menu-list-content {
+    display: none;
+    min-width: 10em;
+    position: absolute;
+    background-color: black;
+    color: white;
+    z-index: 1;
+    /*    Content will come from right to left*/
+    right: 0;
+}
+
+.menu-list:hover .menu-list-content {
+    /*    black box*/
+    display: block;
+    padding-top: 1em;
+    padding-right: 10em;
+    padding-bottom: 0.8em;
+}
+
+
+nav ul .menu-list-content li {
+    /*Padding between words*/
+    padding-top: 0.8em;
+}
+
+nav ul .menu-list-content li a {
+    color: white;
+}
+
+nav ul .menu-list-content li a:hover {
+    color: lightslategray;
+}
+
+nav ul .menu-list-content li a:active {
+    color: #b80000;
+}
+
+.fullscreen-image img {
+    width: 100%;
+    height: auto;
+    padding-top: 2em;
+}
+
+/*makes homepage text easier to read despite the background image*/
+.homepage-text {
+    position: absolute;
+    color: white;
+    text-shadow: 0em 0em 0.3em black, 0em 0em 0.3em black, 0em 0em 0.3em black;
+    padding-top: 10em;
+    padding-left: 16em;
+    padding-right: 40em;
+}
+
+/*ID Selectors/////////////////////////////////////////////////////////////////////*/
+
+/* Homepage fullscreen image*/
+#fullscreen-image {
+    width: 100%;
+    height: auto;
+}
+
+/*Homepage heading*/
+#h1-homepage {
+    color: white;
+    text-shadow: 0em 0em 0.3em black;
+    position: absolute;
+    font-size: 6em;
+    padding-left: 2.67em;
+}
+
+/*Responsive Design/////////////////////////////////////////////////////////////////////*/
+
+
+/*Mobile phones up to 425px width (Large)*/
+@media screen and (max-device-width: 425px) {
+
+    /*    semantics*/
+
+    nav {
+        padding-bottom: 4.5rem;
+        padding-left: 0em;
+    }
+
+    nav ul li {
+        font-size: 3.5em;
+        padding-left: 3rem;
+        padding-top: 0.4em;
+    }
+
+    footer {
+        padding-left: 2em;
+        padding-right: 2em;
+        padding-bottom: 7.5em;
+        align-content: center;
+    }
+
+    /*    typography*/
+
+    p {
+        font-size: 1.2em;
+        line-height: 2.5em;
+        padding-top: 3em;
+    }
+
+    h1 {
+        padding-top: 0.5em;
+    }
+
+    h2,
+    h3 {
+        padding-top: 3em;
+    }
+
+    main ul li,
+    main ol li {
+        line-height: 2.5em;
+    }
+
+    /*    classes*/
+
+    /*    Links are removed*/
+    .nav-other-links {
+        display: none;
+    }
+
+    /*    Menu button is displayed for links*/
+    .menu-list {
+        display: block;
+    }
+
+    /*    Menu button box*/
+    .menu-list:hover .menu-list-content {
+        /*    black box*/
+        display: block;
+        padding-top: 1em;
+        padding-right: 1em;
+        padding-bottom: 3.2em;
+    }
+
+    /*    Menu button links*/
+    .menu-list:hover .menu-list-content li a {
+        line-height: 1em;
+    }
+
+    .wrapper {
+        padding-left: 2em;
+        padding-right: 2em;
+    }
+
+    /*    homepage modifications*/
+
+    #h1-homepage {
+        color: black;
+        text-shadow: none;
+        position: absolute;
+        font-size: 6em;
+        padding-left: 0.4em;
+        padding-bottom: 0em;
+    }
+
+    #fullscreen-image {
+        padding-top: 8em;
+    }
+
+    .homepage-text {
+        position: relative;
+        color: black;
+        text-shadow: none;
+        padding-top: 10em;
+        padding-left: 1em;
+        padding-right: 1em;
+        font-size: 1.5em;
+    }
+
+    .homepage-text p {
+        line-height: 1.5em;
+    }
+
+    .homepage-text li {
+        line-height: 1.5em;
+        padding-top: 0.5em;
+    }
+}
+
+/*End of responsive design for phones*/
+
+
+/*smartphone to ipad*/
+@media screen and (max-device-width: 768px) and (min-device-width: 426px) {
+
+    /*    semantics*/
+
+    nav {
+        padding-bottom: 4.5rem;
+        padding-left: 0em;
+    }
+
+    nav ul li {
+        font-size: 2em;
+        padding-top: 1.1em;
+        padding-left: 1rem;
+    }
+
+    footer {
+        padding-left: 2em;
+        padding-right: 2em;
+        padding-bottom: 4.5em;
+        align-content: center;
+    }
+
+    /*    typography*/
+
+    p {
+        font-size: 1.2em;
+        line-height: 1.5em;
+        padding-top: 1.5em;
+    }
+
+    h1 {
+        padding-top: 0.5em;
+        padding-bottom: 0em;
+    }
+
+    h2,
+    h3 {
+        padding-top: 2em;
+    }
+
+    main ul li,
+    main ol li {
+        line-height: 2em;
+    }
+
+    /*    classes*/
+
+
+    .wrapper {
+        padding-left: 4em;
+        padding-right: 4em;
+    }
+
+    /*    homepage modifications*/
+
+    #h1-homepage {
+        color: black;
+        text-shadow: none;
+        position: absolute;
+        font-size: 6em;
+        padding-left: 0.6em;
+        padding-bottom: 0em;
+    }
+
+    #fullscreen-image {
+        padding-top: 8em;
+    }
+
+    .homepage-text {
+        position: relative;
+        color: black;
+        text-shadow: none;
+        padding-top: 19em;
+        padding-left: 4em;
+        padding-right: 4em;
+        font-size: 1em;
+    }
+
+    .homepage-text p {
+        line-height: 1.5em;
+    }
+
+    .homepage-text li {
+        line-height: 1.5em;
+        padding-top: 0.5em;
+    }
+}
+
+/*End of responsive design for tablets*/
+
+
+/*ipads to large laptops*/
+@media screen and (max-device-width: 1024px) and (min-device-width: 769px) {
+    /*    semantics*/
+
+    nav {
+        padding-bottom: 4.5rem;
+        padding-left: 2em;
+    }
+
+    nav ul li {
+        font-size: 1.5em;
+        padding-top: 1.6em;
+        padding-left: 1rem;
+    }
+
+    footer {
+        padding-left: 2em;
+        padding-right: 2em;
+        padding-bottom: 4.5em;
+        align-content: center;
+    }
+
+    /*    classes*/
+
+
+    .wrapper {
+        padding-left: 6em;
+        padding-right: 12em;
+    }
+
+    /*    homepage modifications*/
+
+    #h1-homepage {
+        padding-left: 1em;
+    }
+
+    .homepage-text {
+        padding-top: 14em;
+        padding-left: 6em;
+        padding-right: 12em;
+    }
+
+    .homepage-text p {
+        line-height: 1.5em;
+    }
+
+    .homepage-text li {
+        line-height: 1.5em;
+        padding-top: 0.5em;
+    }
+}
+
+/*End of responsive design for small laptops*/
+
+
+/*between laptop and large laptop*/
+@media screen and (max-device-width: 1440px) and (min-device-width: 1024px) {
+
+    nav {
+        padding-bottom: 4.5em;
+        padding-left: 8em;
+    }
+
+    nav ul li {
+        padding-top: 1.6em;
+    }
+
+    footer p {
+        padding-bottom: 4.5em;
+    }
+
+
+    /*    classes*/
+
+    .wrapper {
+        padding-left: 11em;
+        padding-right: 15em;
+    }
+
+    /*    homepage modifications*/
+
+    #h1-homepage {
+        padding-left: 1.8em;
+    }
+
+    .homepage-text {
+        padding-top: 14em;
+        padding-left: 11em;
+        padding-right: 15em;
+    }
+}
